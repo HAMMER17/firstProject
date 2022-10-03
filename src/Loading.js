@@ -1,19 +1,32 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import { Ionicons } from '@expo/vector-icons';
 
-const Loading = () => {
+const Loading = ({ data }) => {
+  const icons = {
+    Clouds: {
+      iconName: 'cloud',
+    },
+    Rain: {
+      iconName: 'rainy',
+    }
+  }
+  let item = JSON.parse(data)
+  console.log(icons[item].iconName)
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Загрузка погоды...</Text>
+    <View style={styles.container} colors={['yellow', 'green', 'grey']}>
+      <Text style={styles.text}>
+        <Ionicons name={icons[item].iconName} size={60} color="black" />
+      </Text>
+      <Text style={styles.text}>{data}</Text>
     </View>
   )
 }
 
-export default Loading
+export default Loading;
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'yellow',
+    margin: 20,
   },
   text: {
     fontSize: 25,

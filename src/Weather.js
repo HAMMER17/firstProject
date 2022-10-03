@@ -1,28 +1,31 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-// import propTypes from 'prop-types'
 
-const Weather = ({ temp, main, temp1, temp2 }) => {
+
+const Weather = ({ temp }) => {
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{main}</Text>
-      {/* <Text style={styles.text}>min {temp1}°</Text> */}
-      <Text style={styles.text}>Сегодня {temp}°</Text>
-      {/* <Text style={styles.text}>max {temp2}°</Text> */}
-    </View>
+    <>
+      <View style={styles.container} colors={['grey', 'blue', 'yellow']}>
+
+        <Text style={styles.text}>Сегодня {Math.round(temp)}°</Text>
+
+      </View>
+    </>
   )
 }
-// Weather.propTypes = {
-//   temp: propTypes.number.isRequired
+
+// Weather.propTapes = {
+//   data: propTapes.oneOf(['Rain', 'Clouds'])
 // }
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
   text: {
     fontSize: 40,
+    color: 'white'
   }
 })
 export default Weather
