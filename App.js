@@ -53,7 +53,7 @@ export default function App() {
     <>
       <LinearGradient style={styles.container} colors={['blue', 'green', 'grey']}>
         <Text>город</Text>
-        <Text style={styles.text}>{weather3 ? weather3 : text}</Text>
+        <Text style={styles.text}>{weather3 ? JSON.parse(weather3) : text}</Text>
         <Weather temp={weather1} />
         <Loading data={weather2} />
 
