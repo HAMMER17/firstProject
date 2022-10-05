@@ -5,7 +5,7 @@
     "owner": "hammer17",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon2.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -33,7 +33,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "04567164-425b-41e9-8fed-398c65618309"
+        "projectId": "96cbc3a2-1465-4fac-a65f-f23ae635aeed"
       }
     }
   }
