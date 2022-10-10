@@ -8,7 +8,7 @@ const Weather = ({ temp }) => {
     <>
       <View style={styles.container} colors={['grey', 'blue', 'yellow']}>
 
-        <Text style={styles.text}>Сегодня {Math.round(temp)}°</Text>
+        <Text style={styles.text}>сегодня {Math.round(temp)}°c</Text>
 
       </View>
     </>
@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 40,
-    color: 'white'
+    color: 'white',
+    margin: 20
   }
 })
 export default Weather

@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "firstProject",
-    "slug": "firstProject",
+    "slug": "firstproject",
     "owner": "hammer17",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -33,7 +33,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "96cbc3a2-1465-4fac-a65f-f23ae635aeed"
+        "projectId": "1333518a-b110-4dc4-a5c7-3ad568d7c5de"
       }
     }
   }

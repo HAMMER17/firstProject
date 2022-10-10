@@ -3,40 +3,25 @@ import { View, Text, StyleSheet } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
 
 const Loading = ({ data }) => {
-  const icons = {
-    Clouds: {
-      iconName: 'cloud',
-      text: 'облачно'
-    },
-    Rain: {
-      iconName: 'rainy',
-      text: 'дождь',
-    },
-    Thunderstorm: {
-      iconName: 'thunderstorm',
-      text: 'гроза'
-    },
-    Clear: {
-      iconName: 'sunny',
-      text: 'солнечно'
-    },
-    Drizzle: {
-      iconName: 'rainy',
-      text: 'дождик'
-    },
-    Snow: {
-      iconName: 'snow',
-      text: 'снег'
-    }
+  if ('Clouds' == data) {
+    return <Ionicons name="cloud" size={80} color="black" />
+  } else if ('Rain' == data) {
+    return <Ionicons name="rainy-sharp" size={80} color="black" />
+  } else if ('Thunderstorm' == data) {
+    return <Ionicons name="thunderstorm" size={80} color="black" />
+  } else if ('Clear' == data) {
+    return <Ionicons name="sunny" size={80} color="black" />;
+  } else if ('Drizzle' == data) {
+    return <Ionicons name="rainy" size={80} color="black" />
+  } else if ('Snow' == data) {
+    return <Ionicons name="snow" size={80} color="black" />
   }
-  let item = JSON.parse(data)
-
   return (
     <View style={styles.container} colors={['yellow', 'green', 'grey']}>
-      <Text style={styles.text}>
-        <Ionicons name={icons[item].iconName} size={60} color="black" />
+      <Text style={styles.text}>{
+        <Ionicons name={data} size={60} color="black" />}
       </Text>
-      <Text style={styles.text}>{icons[item].text}</Text>
+
     </View>
   )
 }
@@ -44,12 +29,10 @@ const Loading = ({ data }) => {
 export default Loading;
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    margin: 30,
   },
   text: {
     fontSize: 25,
-    textAlign: 'center'
-    // paddingHorizontal: 30,
-    // paddingVertical: 600,
+    textAlign: 'center',
   }
 })
