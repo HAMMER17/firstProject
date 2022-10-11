@@ -7,17 +7,11 @@ const Weather = ({ temp }) => {
   return (
     <>
       <View style={styles.container} colors={['grey', 'blue', 'yellow']}>
-
         <Text style={styles.text}>сегодня {Math.round(temp)}°c</Text>
-
       </View>
     </>
   )
 }
-
-// Weather.propTapes = {
-//   data: propTapes.oneOf(['Rain', 'Clouds'])
-// }
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'flex-start',

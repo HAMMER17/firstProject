@@ -53,7 +53,7 @@ export default function App() {
     text = JSON.stringify(location);
   }
   console.log(text)
-  console.log(weather)
+
   return (
     <>
       <LinearGradient style={styles.container} colors={['blue', 'green', 'grey']}>
@@ -63,7 +63,6 @@ export default function App() {
         <Text style={styles.text}>{description}</Text>
         <Weather temp={temp} />
         <Loading data={weather} />
-
       </LinearGradient>
 
     </>
